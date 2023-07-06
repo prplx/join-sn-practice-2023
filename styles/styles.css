@@ -2,23 +2,20 @@ body {
   background: url('../images/background.jpg') fixed center;
   background-size: cover;
   font-family: 'Open Sans', sans-serif;
-  max-height: 100vh;
+  min-height: 100vh;
 }
 
-body:not(.feed) {
+body:not(.feed):not(.settings) {
   color: white;
   padding: 4rem;
 }
 
-body.feed {
+body:is(.feed, .settings) {
   padding: 2rem;
 }
 
-.feed .content {
-  height: calc(100vh - 4rem);
-}
-
-.feed .content-col {
+.feed .content-col,
+.settings .content-col {
   background-color: rgb(255, 255, 255, 0.8);
   border-radius: 0.5rem;
 }
